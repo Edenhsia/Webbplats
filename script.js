@@ -41,8 +41,3 @@ lis.forEach(li => {
     }
   })
 });
-
-//projects link disable
-const disabled = document.querySelector('.disabled');
-
-disabled.addEventListener('click', e => e.preventDefault());
