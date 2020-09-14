@@ -41,3 +41,9 @@ lis.forEach(li => {
     }
   })
 });
+
+//header screen<768px 時，hambuger動畫
+document.querySelector('.menu-switch').addEventListener('click', function () {
+  document.querySelector('.menu-switch').classList.toggle('active');
+  document.querySelector('.main-header nav').classList.toggle('show');
+});
