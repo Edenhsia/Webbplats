@@ -633,7 +633,8 @@
 
     /* ==================== Display ==================== */
     .display .pic {
-      width: 60%;
+      width: 100%;
+      max-width: 700px;
       margin: auto;
     }
 
@@ -645,6 +646,7 @@
     /* ==================== Feature ==================== */
     .feature .item {
       display: flex;
+      flex-wrap: wrap;
       align-items: flex-end;
       margin-bottom: 35px;
     }
@@ -654,11 +656,11 @@
     }
 
     .feature .item:nth-of-type(2) .text {
+      order: -1;
       text-align: right;
     }
 
     .feature .item:nth-of-type(2) .pic {
-      order: 1;
       box-shadow: -5px 5px 15px rgba(0, 0, 0, .3);
     }
 
@@ -675,8 +677,8 @@
 
     /* ==================== Techique ==================== */
     .technique .item {
-      width: 270px;
-      margin: 0 15px;
+      width: calc(25% - 30px);
+      margin: 0 15px 15px;
       border-radius: 15px;
       transition: .3s ease;
       padding: 30px 20px;
@@ -864,6 +866,10 @@
         margin: 15px;
         width: calc(50% - 30px);
       }
+
+      .technique .item {
+        width: calc(50% - 30px);
+      }
     }
 
     @media screen and (max-width: 768px) {
@@ -965,5 +971,19 @@
 
       .service .item {
         width: 100%
+      }
+
+      .feature .item .pic,
+      .feature .item .text {
+        width: 100%;
+      }
+
+      .feature .item:nth-of-type(2) .text {
+        order: 1;
+        text-align: left;
+      }
+
+      .technique .item {
+        width: 100%;
       }
     }
